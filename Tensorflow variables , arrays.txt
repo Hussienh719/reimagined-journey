@@ -1,0 +1,44 @@
+from __future__ import absolute_import, division , print_function , unicode_literals
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from IPython.display import clear_output
+from six.moves import urllib
+import tensorflow.compat.v2.feature_column as fc
+import tensorflow as tf
+
+import keras as ks
+import cv2
+
+
+
+print( tf.version )
+
+string = tf.Variable(  "how are you sir" , tf.string   )
+number = tf.Variable(  44 , tf.int64   )
+float = tf.Variable(  44.566 , tf.float64  )
+
+rank_int = tf.Variable(   [ 2 , 3 , 4 ] , tf.int64 )
+rank_string = tf.Variable(   [ "dd" , "dd" , "ee"]  , tf.string  )
+rank_string1 = tf.Variable(   [  [ "a" , "b" ] ,  [  "r"  ,  "y" ]  ]  , tf.string  )
+
+tensor1 = tf.ones( [ 1 , 2 , 3 ] )
+
+tensor2 = tf.reshape(  tensor1  , [ 2  , 3 , 1  ]  )
+tensor3 = tf.reshape(   tensor2 , [ 3 , -1]  )
+print( tensor1 )
+print( tensor2 )
+print( tensor3 )
+
+print(  string  )
+print( number  )
+print(    tf.rank( rank_string  )    )
+print( tf.rank( rank_string ) )
+print(  rank_string1.shape[0] )             # rank_string1.shape
+
+
+
+
+
